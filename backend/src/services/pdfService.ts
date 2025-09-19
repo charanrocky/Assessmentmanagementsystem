@@ -29,6 +29,16 @@ export const generatePDF = async (data: any, config: any, mappings: any) => {
     } else if (s.includes("Endurance") || s.includes("Fitness")) {
       sectionsHtml += `<h2>${s}</h2>
         <p>Endurance (time): ${safe(mapped.endurance)}</p>`;
+    } else if (s === "Heart Health") {
+      sectionsHtml += `<h2>Heart Health</h2>
+    <p>Heart Rate: ${safe(mapped.heartRate)}</p>
+    <p>BP: ${safe(mapped.systolic)} / ${safe(mapped.diastolic)}</p>`;
+    } else if (s === "Stress Level") {
+      sectionsHtml += `<h2>Stress Level</h2>
+    <p>Stress Index: ${safe(mapped.stressIndex)}</p>`;
+    } else if (s === "Posture") {
+      sectionsHtml += `<h2>Posture</h2>
+    <p>Status: ${safe(mapped.posture)}</p>`;
     } else {
       sectionsHtml += `<h2>${s}</h2><p>--</p>`;
     }

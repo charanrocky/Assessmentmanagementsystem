@@ -1,8 +1,10 @@
 export const fieldMappings = {
   overallHealthScore: "accuracy",
   heartRate: "vitalsMap.vitals.heart_rate",
-  bmi: "bodyCompositionData.BMI",
   systolic: "vitalsMap.vitals.bp_sys",
   diastolic: "vitalsMap.vitals.bp_dia",
-  endurance: "exercises[?(@.id==235)].setList[0].time",
+  bmi: "bodyCompositionData.BMI",
+  endurance: "exercises[2].setList[0].time",
+  stressIndex: "vitalsMap.metadata.heart_scores.stress_index",
+  posture: "vitalsMap.posture",
 };
